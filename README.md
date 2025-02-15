@@ -1,2 +1,2 @@
-# curly-octo-eureka-JAVA-EXERCISES-
-This repository focuses on the Java Programming Language problems.
+# Java programs
+This repository focuses on the Java Programming Language mini programs.
