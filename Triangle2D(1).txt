@@ -1,0 +1,53 @@
+public class Tiangle2D extends GeometricObject {
+    private double side1;
+    private double side2;
+    private double side3;
+
+
+//I made a spelling mistake here, you should correct it(Tiangle!=Triangle)
+
+
+    // No-argument constructor (default sides 1.0, 1.0, 1.0)
+    public Tiangle2D() {
+        this.side1 = 1.0;
+        this.side2 = 1.0;
+        this.side3 = 1.0;
+    }
+
+    // Constructor with specified sides
+    public Tiangle2D(double side1, double side2, double side3) {
+        this.side1 = side1;
+        this.side2 = side2;
+        this.side3 = side3;
+    }
+
+    // Getter methods for the sides
+    public double getSide1() {
+        return side1;
+    }
+
+    public double getSide2() {
+        return side2;
+    }
+
+    public double getSide3() {
+        return side3;
+    }
+
+    // Method to calculate the area using Heron's formula
+    public double getArea() {
+        double s = getPerimeter() / 2; // semi-perimeter
+        return Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
+    }
+
+    // Method to calculate the perimeter
+    public double getPerimeter() {
+        return side1 + side2 + side3;
+    }
+
+    // Overridden toString method
+    
+    public String toString() {
+        return "Triangle2D: side1 = " + side1 + ", side2 = " + side2 + ", side3 = " + side3;
+    }
+}
